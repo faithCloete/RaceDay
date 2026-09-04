@@ -1,0 +1,10 @@
+INSERT INTO [User]
+(FirstName, LastName, Email, PasswordHash, PhoneNumber, RoleID)
+VALUES
+    ('Thabo', 'Mokoena', 'thabo@raceday.co.za', 'HASH_ORGANISER_1', '0712345678', 1),
+    ('Lerato', 'Dlamini', 'lerato@raceday.co.za', 'HASH_ORGANISER_2', '0723456789', 1),
+    ('Faith', 'Mhlanga', 'faith@example.com', 'HASH_PARTICIPANT_1', '0734567890', 2),
+    ('Sipho', 'Nkosi', 'sipho@example.com', 'HASH_PARTICIPANT_2', '0745678901', 2);
+
+--CHECKING THE DATA
+SELECT * FROM [User];
