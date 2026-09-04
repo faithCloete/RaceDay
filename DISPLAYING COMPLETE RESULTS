@@ -1,0 +1,17 @@
+-DISPLAYING A COMPLETE RESULTS REPORT
+SELECT
+    R.ResultID,
+    U.FirstName + ' ' + U.LastName AS ParticipantName,
+    EV.EventName,
+    C.CategoryName,
+    R.FinishTime,
+    R.FinishingPosition
+FROM Result AS R
+INNER JOIN Enrolment AS E
+    ON R.EnrolmentID = E.EnrolmentID
+INNER JOIN [User] AS U
+    ON E.ParticipantID = U.UserID
+INNER JOIN Event AS EV
+    ON E.EventID = EV.EventID
+INNER JOIN Category AS C
+    ON E.CategoryID = C.CategoryID;
