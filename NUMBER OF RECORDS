@@ -1,0 +1,33 @@
+--CHECKING THE NUMBER OF RECORDS IN EACH TABLE
+SELECT 'Role' AS TableName, COUNT(*) AS RecordCount
+FROM Role
+
+UNION ALL
+
+SELECT 'User', COUNT(*)
+FROM [User]
+
+UNION ALL
+
+SELECT 'EventType', COUNT(*)
+FROM EventType
+
+UNION ALL
+
+SELECT 'Event', COUNT(*)
+FROM Event
+
+UNION ALL
+
+SELECT 'Category', COUNT(*)
+FROM Category
+
+UNION ALL
+
+SELECT 'Enrolment', COUNT(*)
+FROM Enrolment
+
+UNION ALL
+
+SELECT 'Result', COUNT(*)
+FROM Result;
