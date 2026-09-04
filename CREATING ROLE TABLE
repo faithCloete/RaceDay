@@ -1,0 +1,11 @@
+-CREATING ROLE TABLE
+CREATE TABLE Role
+(RoleID INT IDENTITY(1,1) PRIMARY KEY,
+RoleName VARCHAR(20) NOT NULL UNIQUE);
+
+INSERT INTO Role (RoleName)
+VALUES
+('Organiser'),
+('Participant');
+
+SELECT * FROM Role;
