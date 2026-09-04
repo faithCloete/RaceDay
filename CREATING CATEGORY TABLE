@@ -1,0 +1,27 @@
+--CREATE CATEGORY TABLE
+CREATE TABLE Category
+(
+    CategoryID INT IDENTITY(1,1) PRIMARY KEY,
+    EventID INT NOT NULL,
+    CategoryName VARCHAR(100) NOT NULL,
+    Description VARCHAR(200) NULL,
+
+    CONSTRAINT FK_Category_Event
+        FOREIGN KEY (EventID)
+        REFERENCES Event(EventID),
+
+    CONSTRAINT UQ_Category_Event_CategoryName
+        UNIQUE (EventID, CategoryName)
+);
+
+INSERT INTO Category
+    (EventID, CategoryName, Description)
+VALUES
+    (1, 'Open Men', 'Open category for male runners.'),
+    (1, 'Open Women', 'Open category for female runners.'),
+    (2, 'Adult Walkers', 'Walking category for adult participants.'),
+    (2, 'Junior Walkers', 'Walking category for younger participants.'),
+    (3, 'Elite Cyclists', 'Competitive cycling category.'),
+    (3, 'Social Cyclists', 'Non-competitive cycling category.');
+
+SELECT * FROM Category;
