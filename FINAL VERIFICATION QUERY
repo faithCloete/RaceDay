@@ -1,0 +1,16 @@
+- FINAL VERIFICATION QUERY
+USE RaceDay;
+
+SELECT TABLE_NAME
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_NAME IN
+(
+    'Role',
+    'User',
+    'EventType',
+    'Event',
+    'Category',
+    'Enrolment',
+    'Result'
+)
+ORDER BY TABLE_NAME
