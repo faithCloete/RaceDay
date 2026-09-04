@@ -1,0 +1,15 @@
+--VREATING EVENT TYPE TABLE
+CREATE TABLE EventType
+(
+    EventTypeID INT IDENTITY(1,1) PRIMARY KEY,
+    EventTypeName VARCHAR(20) NOT NULL UNIQUE
+);
+
+INSERT INTO EventType (EventTypeName)
+VALUES
+('Run'),
+('Walk'),
+('Cycle');
+
+--CHECKING DATA
+SELECT * FROM EventType;
