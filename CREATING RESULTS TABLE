@@ -1,0 +1,27 @@
+--CREATE RESULTS TABLE
+CREATE TABLE Result
+(
+    ResultID INT IDENTITY(1,1) PRIMARY KEY,
+    EnrolmentID INT NOT NULL,
+    FinishTime TIME NULL,
+    FinishingPosition INT NULL,
+
+    CONSTRAINT FK_Result_Enrolment
+        FOREIGN KEY (EnrolmentID)
+        REFERENCES Enrolment(EnrolmentID),
+
+    CONSTRAINT UQ_Result_Enrolment
+        UNIQUE (EnrolmentID),
+
+    CONSTRAINT CK_Result_FinishingPosition
+        CHECK (FinishingPosition IS NULL OR FinishingPosition > 0)
+);
+
+INSERT INTO Result
+    (EnrolmentID, FinishTime, FinishingPosition)
+VALUES
+    (1, '03:45:20', 15),
+    (2, '04:10:35', 28),
+    (3, '01:25:10', 8);
+
+SELECT * FROM Result;
