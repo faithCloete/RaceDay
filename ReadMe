@@ -1,0 +1,103 @@
+RaceDay - Event Management REST API
+Project Overview
+RaceDay is an event management REST API developed in C# using ASP.NET Core Web API, SQL Server and Entity Framework Core. The system supports running, walking and cycling events, allowing Organisers to manage events and Participants to enrol and view their race results.
+
+Technologies Used
+C#
+
+.NET 8
+
+ASP.NET Core Web API
+
+SQL Server
+
+SQL Server Management Studio (SSMS)
+
+Entity Framework Core
+
+Swagger / OpenAPI
+
+GitHub
+
+Main Features
+Authentication and Profiles
+Register as an Organiser or Participant.
+
+Log in and log out using session-based authentication.
+
+Securely hash passwords.
+
+View and update the logged-in user's profile.
+
+Event Management
+View available events.
+
+Organisers can create, update and delete their own events.
+
+Events include a name, description, date, location, distance and event type.
+
+Category Management
+View event categories.
+
+Organisers can create, update and delete categories for their own events.
+
+Categories can represent age groups or race distances.
+
+Enrolments
+Participants can enrol in events using an appropriate category.
+
+Duplicate enrolments are prevented.
+
+Organisers can view enrolments for their own events.
+
+Race Results
+Organisers can record participants' finishing times and positions.
+
+Participants can view their own race results.
+
+User Roles
+Organiser
+
+Manage events and categories.
+
+View enrolments for their own events.
+
+Record race results for participants enrolled in their events.
+
+Participant
+
+View events and categories.
+
+Enrol in events.
+
+View personal race results.
+
+View and update their own profile.
+
+Database
+The application uses SQL Server and Entity Framework Core. The database is named RaceDay and contains tables for roles, users, event types, events, categories, enrolments and results.
+
+Setup and Running the Project
+Install Visual Studio 2022 with the .NET 8 development tools.
+
+Install SQL Server or SQL Server LocalDB and SQL Server Management Studio.
+
+Open the RaceDay.sln solution in Visual Studio.
+
+Configure the DefaultConnection connection string in appsettings.json for your local SQL Server instance.
+
+Ensure the RaceDay database exists and has the required tables and data.
+
+Restore the NuGet packages.
+
+Build the solution.
+
+Run the API using Ctrl + F5.
+
+Open the Swagger page launched by the application to explore and test the endpoints.
+
+API Documentation
+Swagger provides an interactive interface for testing the available API endpoints while the application is running.
+
+Project Status
+This project is being developed as part of the RaceDay Part 2 REST API assignment.
